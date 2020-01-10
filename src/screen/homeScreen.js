@@ -1,27 +1,20 @@
-import React, { Component, useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet
-} from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import { CreditCardInput } from "react-native-credit-card-input";
-import startScreen from "./startScreen"
 
-export default class homeScreen extends Component {
-  render() {
-    return (
-      <View style={styles.screenLayout}>
-        <View style={styles.labelView}>
-          <Text style={styles.fontLabel}>
-            Muuve Payment
-          </Text>
-        </View>
-        <View style={styles.bankCard}>
-          <CreditCardInput onChange={this._onChange} />
-        </View>
+const homeScreen = () => {
+  return (
+    <View style={styles.screenLayout}>
+      <View style={styles.labelView}>
+        <Text style={styles.fontLabel}>
+          Muuve Payment
+        </Text>
       </View>
-    );
-  }
+      <View style={styles.bankCard}>
+        <CreditCardInput onChange={this._onChange} />
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -49,3 +42,5 @@ const styles = StyleSheet.create({
     marginTop: 200
   }
 })
+
+export default homeScreen
